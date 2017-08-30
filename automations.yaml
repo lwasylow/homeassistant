@@ -1,0 +1,35 @@
+- action:
+    entity_id: script.power_skyq
+    service: script.turn_on
+  condition: []
+  id: '1503822345936'
+  trigger:
+  - entity_id: input_boolean.powerskyq
+    from: 'off'
+    platform: state
+    to: 'on'
+  alias: Power On Sky Q InputBoolean
+
+- action:
+    entity_id: script.power_skyq
+    service: script.turn_on
+  condition: []
+  id: '1503822345937'
+  trigger:
+  - entity_id: input_boolean.powerskyq
+    from: 'on'
+    platform: state
+    to: 'off'
+  alias: Power Off Sky Q InputBoolean
+
+- action:
+    entity_id: script.switchtosqkyq
+    service: script.turn_on
+  condition: []
+  id: '1503822345938'
+  trigger:
+  - entity_id: input_boolean.switchtosqkyq
+    from: 'on'
+    platform: state
+    to: 'off'
+  alias: Turn On SkyQTV

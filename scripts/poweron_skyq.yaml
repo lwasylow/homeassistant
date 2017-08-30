@@ -1,0 +1,6 @@
+poweron_skyq:
+  alias: Turn On SkyQ Switch
+  sequence:
+  - service: shell_command.power_skyq
+    data_template:
+      command: 'power'

@@ -1,0 +1,8 @@
+poweroff_skyq:
+  alias: Power off SkyQ Switch
+  sequence:
+  - service: shell_command.power_skyq
+    data_template:
+      command: 'power'
+  - service: media_player.turn_off
+    entity_id: media_player.TV

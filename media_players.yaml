@@ -1,0 +1,33 @@
+####MEDIA PLAYERS####
+- platform: webostv
+  host: !secret lgtvip
+  mac: !secret lgtvmac
+  name: TV
+  customize:
+    sources:
+      - livetv
+      - youtube
+      - netflix
+      - 'Amazon Prime Video'
+      - hdmi2
+      - hdmi4
+      - hdmi3
+      - 'Sky HD(GB)'
+
+- platform: universal
+  name: SkyQ
+  commands:
+    turn_on:
+      service: script.turn_on
+      entity_id: script.poweron_skyq
+    turn_off:
+      service: script.turn_on
+      entity_id: script.poweroff_skyq
+    media_play:
+      service: script.turn_on
+      entity_id: script.poweron_skyq
+    media_stop:
+      service: script.turn_on
+      entity_id: script.poweron_skyq
+  attributes:
+    state: switch.skyqstate

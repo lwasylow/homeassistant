@@ -1,0 +1,9 @@
+####BINARY SENSORTS###
+
+#Is SkyQ On
+- platform: rest
+  resource: http://192.168.0.15:9006/as/system/information
+  method: GET
+  name: is_skyq_on
+  value_template: '{% if  value_json.activeStandby | lower  =="false" %} on {%-else %} off {%- endif %}'
+  scan_interval: 5

@@ -1,0 +1,11 @@
+########CUSTOMIZE DEVICES########
+binary_sensor.is_skyq_on: 
+  icon: mdi:power
+  friendly_name: SkyQ State
+
+sensor.sky_purchase_balance:
+  friendly_name: SkyQ Balance
+
+switch.isskyqon:
+  friendly_name: SkyQ Box
+  icon: mdi:power

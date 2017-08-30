@@ -1,0 +1,4 @@
+test:
+  alias: test alexa
+  sequence:
+  - service: shell_command.test

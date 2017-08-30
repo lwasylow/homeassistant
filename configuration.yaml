@@ -1,0 +1,95 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret latitude_loc_home
+  longitude: !secret longitude_loc_home
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 60
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Europe/London
+  customize: !include customization.yaml
+
+# Show links to resources in log and frontend
+introduction:
+
+# Enables the frontend
+frontend:
+
+# Enables configuration UI
+config:
+
+http:
+  # Uncomment this to add a password (recommended!)
+  api_password: !secret http_password
+  # Uncomment this if you are using SSL or running in Docker etc
+  #base_url: example.duckdns.org:8123
+  ssl_certificate: !secret ssl_path
+  ssl_key: !secret ssl_key
+
+# Checks for available updates
+# Note: This component will send some information about your system to
+# the developers to assist with development of Home Assistant.
+# For more information, please see:
+# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
+updater:
+  # Optional, allows Home Assistant developers to focus on popular components.
+  # include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+recorder:
+  purge_days: 5
+
+# Enables support for tracking state changes over time.
+history:
+
+# View all events in a logbook
+logbook:
+
+# Track the sun
+sun:
+
+# Text to speech
+tts:
+  platform: google
+
+alexa:
+media_player: !include media_players.yaml
+script: !include_dir_merge_named scripts
+shell_command: !include shell_commands.yaml
+automation: !include automations.yaml
+sensor: !include sensors.yaml
+binary_sensor: !include binary_sensors.yaml
+switch: !include switches.yaml
+intent_script: !include_dir_merge_named intent_scripts
+
+emulated_hue:
+  host_ip: 192.168.0.28
+  listen_port: 8300
+  off_maps_to_on_domains:
+    - script
+  expose_by_default: true
+  exposed_domains:
+    - media_player
+
+input_boolean:
+ #power SkyQ on Alexa 
+ powerskyq:
+    name: SkyQ
+    initial: off
+    icon: mdi:television
+ 
+#power SkyQ and TV and switch channel Alexa
+ turnonskyq:
+    name: SkyTV
+    initial: off
+    icon: mdi:television
+
+group: !include groups.yaml

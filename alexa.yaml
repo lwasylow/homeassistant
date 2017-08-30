@@ -1,0 +1,18 @@
+intents:
+  TurnOnIntent:
+    action:
+      service: script.turn_on
+      data_template:
+        entity_id: script.turnontv
+    speech:
+      type: plain
+      text: OK
+      
+  RunScriptIntent:
+    action:
+      service: script.turn_on
+      data_template:
+        entity_id: script.{{ Script | replace(" ", "_") }}
+    speech:
+      type: plain
+      text: OK

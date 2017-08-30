@@ -1,0 +1,8 @@
+alexa_turnon_tv:
+  alias: Alexa Intent On LG TV
+  sequence:
+  - condition: state
+    entity_id: 'media_player.TV'
+    state: 'idle'
+  - service: media_player.turn_on
+    entity_id: media_player.TV

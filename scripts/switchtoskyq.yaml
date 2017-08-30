@@ -1,0 +1,11 @@
+switchtosqkyq:
+  alias: Power Up TV and SkyQ
+  sequence:
+  - service: shell_command.power_skyq
+    data_template:
+      command: 'power'
+  - delay: 00:00:02
+  - service: media_player.select_source
+    data:
+      entity_id: media_player.TV
+      source: 'Sky HD(GB)'

@@ -1,0 +1,9 @@
+alexa_turnon_skyq:
+  alias: Alexa Intent On SkyQ
+  sequence:
+  - condition: state
+    entity_id: binary_sensor.is_skyq_on
+    state: 'off'
+  - service: shell_command.power_skyq
+    data_template:
+      command: 'power' 

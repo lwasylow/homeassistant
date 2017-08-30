@@ -1,0 +1,6 @@
+power_skyq:
+  alias: Power on SkyQ
+  sequence:
+  - service: shell_command.power_skyq
+    data_template:
+      command: 'power'

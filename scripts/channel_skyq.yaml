@@ -1,0 +1,10 @@
+channel_skyq:
+  alias: Change Channel to Sky
+  sequence:
+  - condition: state
+    entity_id: media_player.TV
+    state: 'playing'
+  - service: media_player.select_source
+    data:
+      entity_id: media_player.TV
+      source: 'Sky HD(GB)'
