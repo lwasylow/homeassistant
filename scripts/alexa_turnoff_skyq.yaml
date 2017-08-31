@@ -1,0 +1,9 @@
+alexa_turnoff_skyq:
+  alias: Alexa Intent Off SkyQ
+  sequence:
+  - condition: state
+    entity_id: binary_sensor.is_skyq_on
+    state: 'on'
+  - service: shell_command.power_skyq
+    data_template:
+      command: 'power' 
