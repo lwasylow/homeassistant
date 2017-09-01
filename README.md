@@ -33,6 +33,7 @@ Workourn was to use a SkyQ and CEC to allow SkyQ turn on tv on wake up.
 -sky q record
 -tv set volume to x
 - open netflix , amazon etc on tv
+- add channel list read from json pulled out of box : http://{ip}:9006/as/services
  
  
  ### Usage

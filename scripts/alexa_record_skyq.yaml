@@ -1,0 +1,9 @@
+alexa_record_skyq:
+  alias: Alexa Script Record SkyQ
+  sequence:
+  - condition: state
+    entity_id: binary_sensor.is_skyq_on
+    state: 'on'
+  - service: shell_command.skyq_command
+    data_template:
+      command: 'record' 
