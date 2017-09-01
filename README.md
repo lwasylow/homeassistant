@@ -26,7 +26,13 @@ Workourn was to use a SkyQ and CEC to allow SkyQ turn on tv on wake up.
  4. UnMuteIntent
  5. VolumeUpIntent
  6. VolumeDownIntent
-
+ 7. PlayIntent
+ 8. PauseIntent
+ 
+### Work in Progress
+-sky q record
+-tv set volume to x
+- open netflix , amazon etc on tv
  
  
  ### Usage
@@ -36,6 +42,8 @@ Workourn was to use a SkyQ and CEC to allow SkyQ turn on tv on wake up.
  4. Alexa ask Bob to unmute *[ tv ]*
  5. Alexa ask Bob to *[ volume up | increase ]*  *[ tv ]*
  6. Alexa ask Bob to turn on *[skyq | tv ]*
+ 7. Alexa ask Bob to play *[skyq | tv ]*
+ 8. Alexa ask Bob to pause *[skyq | tv ]*
 
  
  

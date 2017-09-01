@@ -2,5 +2,7 @@ power_skyq: /home/homeassistant/.homeassistant/shellcommand/skyqcommand.sh {{com
 
 get_skyq_state: /home/homeassistant/.homeassistant/shellcommand/get_skyq_state.py
 
+skyq_command: /home/homeassistant/.homeassistant/shellcommand/skyqcommand.sh {{command}}
+
 ##TEST###
 test: /home/homeassistant/.homeassistant/shellcommand/mktext.sh
