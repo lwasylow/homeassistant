@@ -1,5 +1,5 @@
 alexa_turnon_tv:
-  alias: Alexa Intent On LG TV
+  alias: Alexa Script On LG TV
   sequence:
   - condition: state
     entity_id: 'media_player.TV'

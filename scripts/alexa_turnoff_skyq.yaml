@@ -1,5 +1,5 @@
 alexa_turnoff_skyq:
-  alias: Alexa Intent Off SkyQ
+  alias: Alexa Script Off SkyQ
   sequence:
   - condition: state
     entity_id: binary_sensor.is_skyq_on

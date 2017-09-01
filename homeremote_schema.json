@@ -1,0 +1,377 @@
+{
+  "intents": [
+    {
+      "name": "AMAZON.CancelIntent",
+      "samples": [
+        "Alexa ask  Bob to cancel"
+      ]
+    },
+    {
+      "name": "AMAZON.HelpIntent",
+      "samples": [
+        "Alexa ask Bob for help",
+        "Alexa ask  bob to help"
+      ]
+    },
+    {
+      "name": "AMAZON.StopIntent",
+      "samples": [
+        "Alexa as  Bob to stop"
+      ]
+    },
+    {
+      "name": "MuteIntent",
+      "samples": [
+        "Alexa ask Bob to mute {device_name}",
+        "Alexa ask Bob silence {device_name} "
+      ],
+      "slots": [
+        {
+          "name": "device_name",
+          "type": "WatchinDevice",
+          "samples": [
+            "tv",
+            "skyq"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "RunScriptIntent",
+      "samples": [
+        "Alexa ask Bob to run {Script}"
+      ],
+      "slots": [
+        {
+          "name": "Script",
+          "type": "Scripts",
+          "samples": []
+        }
+      ]
+    },
+    {
+      "name": "TurnOffIntent",
+      "samples": [
+        "Alexa ask Bob to turn off {device_name}",
+        "Alexa ask Bob to switch off {device_name}",
+        "Alexa ask Bob to power off {device_name}"
+      ],
+      "slots": [
+        {
+          "name": "device_name",
+          "type": "WatchinDevice",
+          "samples": [
+            "LG TV",
+            "TV",
+            "Livingroom TV",
+            "Sky Q",
+            "Sky Box",
+            "Sky"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "TurnOnIntent",
+      "samples": [
+        "Alexa ask Bob to turn on {device_name}",
+        "Alexa ask Bob to switch on {device_name}",
+        "Alexa ask Bob to power on {device_name}"
+      ],
+      "slots": [
+        {
+          "name": "device_name",
+          "type": "WatchinDevice",
+          "samples": [
+            "tv",
+            "skyq",
+            "Sky Q",
+            "LG TV",
+            "Livingroom TV",
+            "Sky",
+            "Sky Box"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "UnMuteIntent",
+      "samples": [
+        "Alexa ask Bob to turn on sound on {device_name}",
+        "Alexa ask Bob to unmute {device_name}"
+      ],
+      "slots": [
+        {
+          "name": "device_name",
+          "type": "WatchinDevice",
+          "samples": [
+            "tv"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "VolumeDownIntent",
+      "samples": [
+        "Alexa ask Bob to volume down {device_name}",
+        "Alexa ask Bob to decrease {device_name}"
+      ],
+      "slots": [
+        {
+          "name": "device_name",
+          "type": "WatchinDevice",
+          "samples": [
+            "tv"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "VolumeUpIntent",
+      "samples": [
+        "Alexa ask Bob to volume up {device_name}",
+        "Alexa ask Bob to increase {device_name}"
+      ],
+      "slots": [
+        {
+          "name": "device_name",
+          "type": "WatchinDevice",
+          "samples": [
+            "tv"
+          ]
+        }
+      ]
+    }
+  ],
+  "types": [
+    {
+      "name": "Scripts",
+      "values": [
+        {
+          "id": null,
+          "name": {
+            "value": "test",
+            "synonyms": []
+          }
+        }
+      ]
+    },
+    {
+      "name": "WatchinDevice",
+      "values": [
+        {
+          "id": null,
+          "name": {
+            "value": "tv",
+            "synonyms": [
+              "LG TV",
+              "Livingroom TV",
+              "Television",
+              "TV in Livingroom"
+            ]
+          }
+        },
+        {
+          "id": null,
+          "name": {
+            "value": "skyq",
+            "synonyms": [
+              "Sky Q",
+              "Sky",
+              "Sky Box"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "prompts": [
+    {
+      "id": "Elicit.Intent-MuteIntent.IntentSlot-device_name",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "Which device you want to mute"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-TurnOffIntent.IntentSlot-device_name",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "Which device you want to turn on"
+        },
+        {
+          "type": "PlainText",
+          "value": "Which device you want to power on"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-TurnOnIntent.IntentSlot-device_name",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "What you want to turn on"
+        },
+        {
+          "type": "PlainText",
+          "value": "What you want to switch on"
+        },
+        {
+          "type": "PlainText",
+          "value": "Whch device to turn on"
+        },
+        {
+          "type": "PlainText",
+          "value": "Which device to switch on"
+        },
+        {
+          "type": "PlainText",
+          "value": "What you want to power up"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-UnMuteIntent.IntentSlot-device_name",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "Which device you want to unmute"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-VolumeDownIntent.IntentSlot-device_name",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "Which device you want to volume down"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-VolumeUpIntent.IntentSlot-device_name",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "Which device you want to volume up"
+        }
+      ]
+    }
+  ],
+  "dialog": {
+    "version": "1.0",
+    "intents": [
+      {
+        "name": "MuteIntent",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+          {
+            "name": "device_name",
+            "type": "WatchinDevice",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicit": "Elicit.Intent-MuteIntent.IntentSlot-device_name"
+            }
+          }
+        ]
+      },
+      {
+        "name": "TurnOffIntent",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+          {
+            "name": "device_name",
+            "type": "WatchinDevice",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicit": "Elicit.Intent-TurnOffIntent.IntentSlot-device_name"
+            }
+          }
+        ]
+      },
+      {
+        "name": "TurnOnIntent",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+          {
+            "name": "device_name",
+            "type": "WatchinDevice",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicit": "Elicit.Intent-TurnOnIntent.IntentSlot-device_name"
+            }
+          }
+        ]
+      },
+      {
+        "name": "UnMuteIntent",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+          {
+            "name": "device_name",
+            "type": "WatchinDevice",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicit": "Elicit.Intent-UnMuteIntent.IntentSlot-device_name"
+            }
+          }
+        ]
+      },
+      {
+        "name": "VolumeDownIntent",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+          {
+            "name": "device_name",
+            "type": "WatchinDevice",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicit": "Elicit.Intent-VolumeDownIntent.IntentSlot-device_name"
+            }
+          }
+        ]
+      },
+      {
+        "name": "VolumeUpIntent",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+          {
+            "name": "device_name",
+            "type": "WatchinDevice",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicit": "Elicit.Intent-VolumeUpIntent.IntentSlot-device_name"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,5 +1,5 @@
 alexa_turnon_skyq:
-  alias: Alexa Intent On SkyQ
+  alias: Alexa Script On SkyQ
   sequence:
   - condition: state
     entity_id: binary_sensor.is_skyq_on
