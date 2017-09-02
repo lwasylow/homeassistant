@@ -6,4 +6,4 @@ SetVolumeIntent:
       volume_level: "{{ float(volume) / 100.0 }}"
   speech:
     type: plaintext
-    text: OK
+    text: !include alexa_confirm.yaml
