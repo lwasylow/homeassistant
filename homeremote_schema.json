@@ -37,6 +37,55 @@
       ]
     },
     {
+      "name": "PauseIntent",
+      "samples": [
+        "Alexa ask Bob to pause {device_name}",
+        "Alex ask Bob to stop {device_name}"
+      ],
+      "slots": [
+        {
+          "name": "device_name",
+          "type": "WatchinDevice",
+          "samples": [
+            "tv",
+            "skyq"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "PlayIntent",
+      "samples": [
+        "Alexa ask Bob to play {device_name}",
+        "Alexa ask Bob to resume {device_name}"
+      ],
+      "slots": [
+        {
+          "name": "device_name",
+          "type": "WatchinDevice",
+          "samples": [
+            "tv",
+            "skyq"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "RecordIntent",
+      "samples": [
+        "Alexa ask Bob to record on {device_name}"
+      ],
+      "slots": [
+        {
+          "name": "device_name",
+          "type": "WatchinDevice",
+          "samples": [
+            "skyq"
+          ]
+        }
+      ]
+    },
+    {
       "name": "RunScriptIntent",
       "samples": [
         "Alexa ask Bob to run {Script}"
@@ -198,6 +247,39 @@
       ]
     },
     {
+      "id": "Elicit.Intent-PauseIntent.IntentSlot-device_name",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "Which device you want to pause"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-PlayIntent.IntentSlot-device_name",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "Which device you want to resume"
+        }
+      ]
+    },
+    {
+      "id": "Elicit.Intent-RecordIntent.IntentSlot-device_name",
+      "promptVersion": "1.0",
+      "definitionVersion": "1.0",
+      "variations": [
+        {
+          "type": "PlainText",
+          "value": "Which device you wanto to record"
+        }
+      ]
+    },
+    {
       "id": "Elicit.Intent-TurnOffIntent.IntentSlot-device_name",
       "promptVersion": "1.0",
       "definitionVersion": "1.0",
@@ -288,6 +370,54 @@
             "confirmationRequired": false,
             "prompts": {
               "elicit": "Elicit.Intent-MuteIntent.IntentSlot-device_name"
+            }
+          }
+        ]
+      },
+      {
+        "name": "PauseIntent",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+          {
+            "name": "device_name",
+            "type": "WatchinDevice",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicit": "Elicit.Intent-PauseIntent.IntentSlot-device_name"
+            }
+          }
+        ]
+      },
+      {
+        "name": "PlayIntent",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+          {
+            "name": "device_name",
+            "type": "WatchinDevice",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicit": "Elicit.Intent-PlayIntent.IntentSlot-device_name"
+            }
+          }
+        ]
+      },
+      {
+        "name": "RecordIntent",
+        "confirmationRequired": false,
+        "prompts": {},
+        "slots": [
+          {
+            "name": "device_name",
+            "type": "WatchinDevice",
+            "elicitationRequired": true,
+            "confirmationRequired": false,
+            "prompts": {
+              "elicit": "Elicit.Intent-RecordIntent.IntentSlot-device_name"
             }
           }
         ]

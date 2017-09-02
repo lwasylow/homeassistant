@@ -29,9 +29,9 @@ Workourn was to use a SkyQ and CEC to allow SkyQ turn on tv on wake up.
  7. PlayIntent
  8. PauseIntent
  9. RecordIntent
+ 10.SetVolumeIntent
  
 ### Work in Progress
--tv set volume to x
 - open netflix , amazon etc on tv
 - add channel list read from json pulled out of box : http://{ip}:9006/as/services
  
@@ -42,10 +42,12 @@ Workourn was to use a SkyQ and CEC to allow SkyQ turn on tv on wake up.
  3. Alexa ask Bob to *[ mute | silence ]* *[ tv ]*
  4. Alexa ask Bob to unmute *[ tv ]*
  5. Alexa ask Bob to *[ volume up | increase ]*  *[ tv ]*
- 6. Alexa ask Bob to turn on *[ skyq | tv ]*
- 7. Alexa ask Bob to play *[ skyq | tv ]*
- 8. Alexa ask Bob to pause *[ skyq | tv ]*
- 8. Alexa ask Bob to record *[ skyq ]*
+ 6. Alexa ask Bob to *[ volume up | increase ]*  *[ tv ]*
+ 7. Alexa ask Bob to turn on *[ skyq | tv ]*
+ 8. Alexa ask Bob to play *[ skyq | tv ]*
+ 9. Alexa ask Bob to pause *[ skyq | tv ]*
+ 10.Alexa ask Bob to record *[ skyq ]*
+ 11.Alexa ask Bob to set volume to *[ text number] * 
 
  
  
