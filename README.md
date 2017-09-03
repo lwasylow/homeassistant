@@ -29,7 +29,8 @@ Workourn was to use a SkyQ and CEC to allow SkyQ turn on tv on wake up.
  7. PlayIntent
  8. PauseIntent
  9. RecordIntent
- 10.SetVolumeIntent
+ 10. SetVolumeIntent
+ 11. OpenTVAppIntent
  
 ### Work in Progress
 - open netflix , amazon etc on tv
@@ -46,8 +47,9 @@ Workourn was to use a SkyQ and CEC to allow SkyQ turn on tv on wake up.
  7. Alexa ask Bob to turn on *[ skyq | tv ]*
  8. Alexa ask Bob to play *[ skyq | tv ]*
  9. Alexa ask Bob to pause *[ skyq | tv ]*
- 10.Alexa ask Bob to record *[ skyq ]*
- 11.Alexa ask Bob to set volume to *[ text number] * 
+ 10. Alexa ask Bob to record *[ skyq ]*
+ 11. Alexa ask Bob to set volume to *[ text number] * 
+ 12. Alexa ask Bob to open *[ netflix | amazon | youtube ] *
 
  
  
