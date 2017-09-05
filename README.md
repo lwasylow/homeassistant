@@ -30,10 +30,9 @@ Workourn was to use a SkyQ and CEC to allow SkyQ turn on tv on wake up.
  8. PauseIntent
  9. RecordIntent
  10. SetVolumeIntent
- 11. OpenTVAppIntent
+ 11. OpenAppIntent
  
 ### Work in Progress
-- open netflix , amazon etc on tv
 - add channel list read from json pulled out of box : http://{ip}:9006/as/services
  
  
