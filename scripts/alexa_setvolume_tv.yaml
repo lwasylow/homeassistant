@@ -1,0 +1,10 @@
+alexa_setvolume_tv:
+  alias: Alexa Script Set Volume LG TV
+  sequence:
+  - condition: state
+    entity_id: 'media_player.TV'
+    state: 'playing'  
+  - service: media_player.volume_set
+    data_template:
+      entity_id: media_player.TV
+      volume_level: '{{ volume_level }}'

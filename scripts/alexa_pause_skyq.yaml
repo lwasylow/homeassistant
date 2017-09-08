@@ -1,0 +1,9 @@
+alexa_pause_skyq:
+  alias: Alexa Script Pause SkyQ
+  sequence:
+  - condition: state
+    entity_id: binary_sensor.is_skyq_on
+    state: 'on'
+  - service: shell_command.skyq_command
+    data_template:
+      command: 'pause' 

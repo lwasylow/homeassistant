@@ -1,12 +1,5 @@
 ####SENSORS#####
 
-#SkyQ State
-#- platform: rest
-#  resource: http://192.168.0.15:9006/as/system/information
-#  method: GET
-#  value_template: '{{value_json.activeStandby}}'
-#  name: Is SkyQ Off
-
 #Weather Information
 - platform: yr
   name: Weather
@@ -20,4 +13,3 @@
   method: GET
   value_template: '{{value_json.purchasebalance}}'
   name: sky_purchase_balance
-

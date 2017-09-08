@@ -1,0 +1,12 @@
+alexa_mute_tv:
+  alias: Alexa Script Mute LG TV
+  sequence:
+  - condition: template
+    value_template: '{{ states.media_player.TV.attributes.is_volume_muted == false }}'
+  - condition: state
+    entity_id: 'media_player.TV'
+    state: 'playing'  
+  - service: media_player.volume_mute
+    data:
+      entity_id: media_player.TV
+      is_volume_muted: 'true'

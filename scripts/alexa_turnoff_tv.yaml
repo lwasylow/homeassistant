@@ -1,0 +1,8 @@
+alexa_turnoff_tv:
+  alias: Alexa Script Off LG TV
+  sequence:
+  - condition: state
+    entity_id: 'media_player.TV'
+    state: 'playing'
+  - service: media_player.turn_off
+    entity_id: media_player.TV

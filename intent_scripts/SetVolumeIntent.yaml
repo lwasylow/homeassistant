@@ -1,0 +1,9 @@
+SetVolumeIntent:
+  action:
+    service: media_player.volume_set
+    data_template:
+      entity_id: media_player.TV
+      volume_level: "{{ float(volume) / 100.0 }}"
+  speech:
+    type: plaintext
+    text: !include alexa_confirm.yaml

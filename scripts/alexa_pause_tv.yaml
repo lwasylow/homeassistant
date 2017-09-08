@@ -1,0 +1,9 @@
+alexa_pause_tv:
+  alias: Alexa Script Pause LG TV
+  sequence:
+  - condition: state
+    entity_id: 'media_player.TV'
+    state: 'playing'  
+  - service: media_player.media_pause
+    entity_id: media_player.TV
+ 

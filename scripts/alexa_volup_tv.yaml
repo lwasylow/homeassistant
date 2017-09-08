@@ -1,0 +1,9 @@
+alexa_volup_tv:
+  alias: Alexa Script Volume Up LG TV
+  sequence:
+  - condition: state
+    entity_id: 'media_player.TV'
+    state: 'playing'  
+  - service: media_player.volume_up
+    entity_id: media_player.TV
+ 

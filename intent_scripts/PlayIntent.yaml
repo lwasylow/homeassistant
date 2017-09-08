@@ -1,8 +1,8 @@
-TurnOnIntent:
+PlayIntent:
   action:
     service: script.turn_on
     data_template:
-      entity_id: script.{{ "alexa_turnon_" ~ device_name | replace(" ", "_") }}
+      entity_id: script.{{ "alexa_play_" ~ device_name | replace(" ", "_") }}
   speech:
     type: plain
     text: !include alexa_confirm.yaml

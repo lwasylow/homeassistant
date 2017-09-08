@@ -1,9 +1,9 @@
-alexa_turnon_skyq:
-  alias: Alexa Script On SkyQ
+alexa_turnoff_skyq:
+  alias: Alexa Script Off SkyQ
   sequence:
   - condition: state
     entity_id: binary_sensor.is_skyq_on
-    state: 'off'
+    state: 'on'
   - service: shell_command.power_skyq
     data_template:
       command: 'power' 

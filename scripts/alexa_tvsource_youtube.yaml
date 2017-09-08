@@ -1,0 +1,10 @@
+alexa_tvsource_youtube:
+  alias: Alexa Change Channel to Youtube
+  sequence:
+  - condition: state
+    entity_id: media_player.TV
+    state: 'playing'
+  - service: media_player.select_source
+    data:
+      entity_id: media_player.TV
+      source: 'YouTube'
