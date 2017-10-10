@@ -1,0 +1,21 @@
+#!/bin/bash
+
+ledcommand=$1
+
+declare -A KEYMAP
+
+ KEYMAP[power]=KEY_POWER
+ KEYMAP[play]=KEY_PLAY
+ KEYMAP[red]=KEY_RED
+ KEYMAP[green]=KEY_GREEN
+ KEYMAP[blue]=KEY_BLUE
+ KEYMAP[white]=KEY_1
+ KEYMAP[orange]=KEY_BRIGHTNESSUP
+ KEYMAP[1]=KEY_BRIGHTNESSDOWN
+ KEYMAP[2]=KEY_2
+ KEYMAP[3]=KEY_3
+ KEYMAP[4]=KEY_4
+ KEYMAP[quick]=KEY_Q
+ KEYMAP[sloq]=KEY_S
+
+irsend SEND_ONCE LEDSTRIP "${KEYMAP[${ledcommand}]}"

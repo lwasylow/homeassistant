@@ -4,5 +4,7 @@ get_skyq_state: /home/homeassistant/.homeassistant/shellcommand/get_skyq_state.p
 
 skyq_command: /home/homeassistant/.homeassistant/shellcommand/skyqcommand.sh {{command}}
 
+ir_led_command: /home/homeassistant/.homeassistant/shellcommand/ir_led_command.sh {{ir_key}}
+
 ##TEST###
 test: /home/homeassistant/.homeassistant/shellcommand/mktext.sh

@@ -1,0 +1,6 @@
+alexa_turnon_ledtv:
+  alias: Alexa Script IR Led TV
+  sequence:
+  - service: shell_command.ir_led_command
+    data_template:
+      ir_key: 'power'

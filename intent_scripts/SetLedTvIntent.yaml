@@ -1,0 +1,8 @@
+SetLedTvIntent:
+  action:
+    service: shell_command.ir_led_command
+    data_template:
+      ir_key: '{{ color | replace(" ", "_") }}'
+  speech:
+    type: plaintext
+    text: !include alexa_confirm.yaml
