@@ -5,5 +5,5 @@ SetVolumeIntent:
       entity_id: media_player.TV
       volume_level: "{{ (float(volume) / 100.0) | round(3) }}"
   speech:
-    type: plaintext
+    type: plain
     text: !include alexa_confirm.yaml

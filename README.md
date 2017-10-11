@@ -31,14 +31,15 @@ Workourn was to use a SkyQ and CEC to allow SkyQ turn on tv on wake up.
  9. RecordIntent
  10. SetVolumeIntent
  11. OpenAppIntent
+ 12. SetLedTvIntent
  
 ### Work in Progress
 - add channel list read from json pulled out of box : http://{ip}:9006/as/services
  
  
  ### Usage
- 1. Alexa ask Bob to *[ turn on | power on | switch on ]* *[ skyq | tv ]*
- 2. Alexa ask Bob to *[ turn off | power off | switch off ]* *[skyq | tv ]*
+ 1. Alexa ask Bob to *[ turn on | power on | switch on ]* *[ skyq | tv | ledtv ]*
+ 2. Alexa ask Bob to *[ turn off | power off | switch off ]* *[skyq | tv | ledtv ]*
  3. Alexa ask Bob to *[ mute | silence ]* *[ tv ]*
  4. Alexa ask Bob to unmute *[ tv ]*
  5. Alexa ask Bob to *[ volume up | increase ]*  *[ tv ]*
@@ -49,7 +50,7 @@ Workourn was to use a SkyQ and CEC to allow SkyQ turn on tv on wake up.
  10. Alexa ask Bob to record *[ skyq ]*
  11. Alexa ask Bob to set volume to *[ text number] * 
  12. Alexa ask Bob to open *[ netflix | amazon | youtube ] *
-
+ 13. Alexa ask Bob to [ make | set* ] ledtv (to*) [ red | blue | white | green ]
  
  
  

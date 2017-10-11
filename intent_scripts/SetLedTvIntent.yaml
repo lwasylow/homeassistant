@@ -4,5 +4,5 @@ SetLedTvIntent:
     data_template:
       ir_key: '{{ color | replace(" ", "_") }}'
   speech:
-    type: plaintext
+    type: plain
     text: !include alexa_confirm.yaml
